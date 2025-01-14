@@ -1,0 +1,11 @@
+// SLL_makefile
+
+SLL: student_data_base.o main_student_data_base.o
+	cc student_data_base.o main_student_data_base.o -o SLL
+student_data_base.o:student_data_base.c header.h
+	cc -c student_data_base.c
+main_student_data_base.o:main_student_data_base.c header.h
+	cc -c main_student_data_base.c
+clear:
+	@echo "cleaning up..."
+	@rm *.o
